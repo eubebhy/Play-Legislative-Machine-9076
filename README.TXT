@@ -58,13 +58,13 @@ This is a project helps users manage removable drives such as USB drives.
         ->
     core/watcher.py -> drive path
         ->
-    core/registry.py -> load stage
+    core/registry.py -> Load USB drives's info
         ->
     core/classifier.py -> drive's status
         ->
     core/policies/__init__.py  -> action
         ->
-    core/registry.py -> update stage
+    core/registry.py -> Update USB drives's info.
         ->
     core/log.py -> save work log
 
