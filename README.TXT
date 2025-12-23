@@ -28,63 +28,44 @@ This is a project helps users manage removable drives such as USB drives.
 
 ## Project files structure
 
-PLay Legislative Machine/
-│
-├── PLM_autorun_creator.py
-│ Create autorun.inf for target USB drives.
-│
-├── PLM_policy.py
-│ Do action for USB drive.
-│
-├── PLM-9076.py / PLM-9076.exe
-│ The entry point of the project.
-│ Use watcher.py to listen for new USB drive then call
-│ PLM_autorun_creator.py and PLM_policy.py's functions
-│ for logic.
-│
-├── fake_virus_dropper.py
-│ Generate fake virus for scan virus feature testing.
-│
-├── legal_viewer.py
-│ Legal view GUI app.
-│
-└── core/
-├── policies.py
-│ Policies function for PLM_policy.py
-│
-├── watcher.py
-│ Listen for new USB drives
-│
-└── classifier/
-├── scanner.py
-│ Scan for viruses
-│
-└── autorun_runner.py
-Autorun for USB drive
+- PLay Legislative Machine/
+  - PLM_autorun_creator.py  
+    Create autorun.inf for target USB drives.
+  - PLM_policy.py  
+    Do acction for USB drive.
+  - PLM-9076.py / PLM-9076.exe  
+    The entry point of the project.  
+    Use watcher.py to listen for new USB drive then call  
+    PLM_autorun_creator.py and PLM_policy.py's functions for logic.
+  - fake_virus_dropper.py  
+    Generate fake virus for scan virus feature testing.
+  - legal_viewer.py  
+    Legal view GUI app.
+  - core/
+    - policies.py  
+      Policys function for PLM_policy.py
+    - watcher.py  
+      Listen for new USB drives
+    - classifier/
+      - scanner.py  
+        Scan for viruses
+      - autorun_runner.py  
+        Autorun for USB drive
 
+## How does it work
 
-
-## How does it work?
-
-USB plugged
-->
-core/watcher.py -> drive path
-->
-core/registry.py -> Load USB drive's info
-->
-core/classifier.py -> drive's status
-->
-core/policies/init.py -> action
-->
-core/registry.py -> Update USB drive's info
-->
-core/log.py -> save work log
-
+- USB plugged
+- core/watcher.py -> drive path
+- core/registry.py -> Load USB drives's info
+- core/classifier.py -> drive's status
+- core/policies/__init__.py -> action
+- core/registry.py -> Update USB drives's info
+- core/log.py -> save work log
 
 ## USAGE
 
-1. Run the PLM-9076.exe to start, it uses terminal UI.
-2. Plug in your USB drives and enjoy.
+1. Run the PLM-9076.exe to start, it use terminal UI.
+2. Plugin your USB drives and enjoys!
 
 ## Disclaimer
 
