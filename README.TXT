@@ -28,6 +28,40 @@ This is a project helps users manage removable drives such as USB drives.
 
 ## Project files structure
 
+PLay Legislative Machine/
+│
+├── PLM_autorun_creator.py
+│ Create autorun.inf for target USB drives.
+│
+├── PLM_policy.py
+│ Do action for USB drive.
+│
+├── PLM-9076.py / PLM-9076.exe
+│ The entry point of the project.
+│ Use watcher.py to listen for new USB drive then call
+│ PLM_autorun_creator.py and PLM_policy.py's functions
+│ for logic.
+│
+├── fake_virus_dropper.py
+│ Generate fake virus for scan virus feature testing.
+│
+├── legal_viewer.py
+│ Legal view GUI app.
+│
+└── core/
+├── policies.py
+│ Policies function for PLM_policy.py
+│
+├── watcher.py
+│ Listen for new USB drives
+│
+└── classifier/
+├── scanner.py
+│ Scan for viruses
+│
+└── autorun_runner.py
+Autorun for USB drive
+
 
 
 ## How does it work?
@@ -46,8 +80,6 @@ core/registry.py -> Update USB drive's info
 ->
 core/log.py -> save work log
 
-markdown
-Sao chép mã
 
 ## USAGE
 
